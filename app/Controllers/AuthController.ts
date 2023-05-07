@@ -26,20 +26,14 @@ export default class AuthController extends ControllerBase {
         .json({ error: 'Invalid credentials!' });
     }
 
-    // TODO: The redis driver will automatically delete the expired tokens.
-    // However, for SQL storage, we will have to write a custom script and delete token with expires_at timestamp smaller than today.
-    // const token = await auth.use('api').generate(user, {
-    //   expiresIn: '7days',
-    // });
+    const token = await auth.use('api').generate(user, {
+      expiresIn: '7days',
+    });
 
-    const token = await auth.use('api').attempt(payload.email, payload.password);
-
-    return token;
-
-    // return {
-    //   userId: token.user.id,
-    //   ...token.toJSON(),
-    // };
+    return {
+      userId: token.user.id,
+      ...token.toJSON(),
+    };
   }
 
   public async register({ request }: HttpContextContract) {

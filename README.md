@@ -14,13 +14,10 @@ NodeJs Version >= 14.x
 
 ## Installation
 
-Create `.env` file based on `.env.example`.
-
-Install project packages with `npm install`.
-
-Generate a new `APP_KEY` secret with command `node ace generate:key` and paste value to `.env` file for the `APP_KEY`.
-
-Start the server with command `npm run dev`.
+- Create `.env` file based on `.env.example`.
+- Install project packages with `npm install`.
+- Generate a new `APP_KEY` secret with command `node ace generate:key` and paste value to `.env` file for the `APP_KEY`.
+- Start the server with command `npm run dev`.
 
 ## Fake Data
 
