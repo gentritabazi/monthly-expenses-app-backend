@@ -4,10 +4,6 @@ App that allows you to track your expenses on a monthly basis. With this app, yo
 
 Check frontend app [here](https://github.com/gentritabazi/monthly-expenses-app-frontend).
 
-## Online App
-
-TBA
-
 ## Requirements
 
 NodeJs Version >= 14.x
