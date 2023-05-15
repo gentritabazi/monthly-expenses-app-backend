@@ -2,7 +2,7 @@ import ControllerBase from 'App/Abstracts/ControllerBase';
 import Expense from 'App/Models/Expense';
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext';
 
-export default class PayController extends ControllerBase {
+export default class ExpenseController extends ControllerBase {
   public async index({ auth }: HttpContextContract) {
     const userId = auth.user?.id || 0;
 
